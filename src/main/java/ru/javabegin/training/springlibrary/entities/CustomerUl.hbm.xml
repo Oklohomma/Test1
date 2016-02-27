@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="ru.javabegin.training.springlibrary.entities.CustomerUl" table="customer_ul" schema="" catalog="komp">
+        <id name="kodCustU" column="kod_cust_u"/>
+        <property name="customer" column="customer"/>
+        <property name="inNcustomer" column="INNcustomer"/>
+        <property name="addressCust" column="AddressCust"/>
+        <property name="chief" column="chief"/>
+        <property name="bankCustomer" column="BankCustomer"/>
+        <property name="phone" column="phone"/>
+        <property name="accountcust" column="accountcust"/>
+    </class>
+</hibernate-mapping>

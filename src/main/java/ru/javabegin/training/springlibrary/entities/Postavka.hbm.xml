@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="ru.javabegin.training.springlibrary.entities.Postavka" table="postavka" schema="" catalog="komp">
+        <id name="kodP" column="kod_p"/>
+        <property name="kodProvider" column="kod_provider"/>
+        <property name="kodFilm" column="kod_film"/>
+        <property name="kolVo" column="kol_vo"/>
+        <property name="summa" column="summa"/>
+        <property name="dataOpl" column="data_opl"/>
+        <property name="dataP" column="data_p"/>
+    </class>
+</hibernate-mapping>

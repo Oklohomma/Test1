@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="ru.javabegin.training.springlibrary.entities.Provider" table="provider" schema="" catalog="komp">
+        <id name="kodProvider" column="kod_provider"/>
+        <property name="provider" column="provider"/>
+        <property name="inn" column="INN"/>
+        <property name="address" column="Address"/>
+        <property name="bank" column="Bank"/>
+        <property name="account" column="Account"/>
+    </class>
+</hibernate-mapping>

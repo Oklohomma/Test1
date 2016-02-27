@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+    "-//Hibernate/Hibernate Configuration DTD//EN"
+    "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+  <session-factory>
+
+     <property name="hibernate.dialect">org.hibernate.dialect.MySQL5Dialect</property>
+      <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+    <property name="connection.url">jdbc:mysql://localhost:3306/komp</property>
+    <property name="hibernate.show_sql">true</property>
+    <property name="hibernate.current_session_context_class">thread</property>
+    <property name="hibernate.connection.datasource">jdbc/Library</property>
+    <property name="hibernate.connection.username">komp</property>
+    <property name="hibernate.connection.password">1993lbvf</property>
+
+      <mapping class="ru.javabegin.training.springlibrary.entities.CustomerFl"/>
+      <mapping resource="ru/javabegin/training/springlibrary/entities/CustomerFl.hbm.xml"/>
+      <mapping class="ru.javabegin.training.springlibrary.entities.CustomerUl"/>
+      <mapping resource="ru/javabegin/training/springlibrary/entities/CustomerUl.hbm.xml"/>
+      <mapping class="ru.javabegin.training.springlibrary.entities.Film"/>
+      <mapping resource="ru/javabegin/training/springlibrary/entities/Film.hbm.xml"/>
+      <mapping class="ru.javabegin.training.springlibrary.entities.Kassa"/>
+      <mapping resource="ru/javabegin/training/springlibrary/entities/Kassa.hbm.xml"/>
+      <mapping class="ru.javabegin.training.springlibrary.entities.Postavka"/>
+      <mapping resource="ru/javabegin/training/springlibrary/entities/Postavka.hbm.xml"/>
+      <mapping class="ru.javabegin.training.springlibrary.entities.Provider"/>
+      <mapping resource="ru/javabegin/training/springlibrary/entities/Provider.hbm.xml"/>
+      <mapping resource="ru/javabegin/training/springlibrary/entities/SchetFaktura.hbm.xml"/>
+      <mapping class="ru.javabegin.training.springlibrary.entities.SchetFaktura"/>
+      <mapping class="ru.javabegin.training.springlibrary.entities.Sklad"/>
+      <mapping resource="ru/javabegin/training/springlibrary/entities/Sklad.hbm.xml"/>
+      <mapping class="ru.javabegin.training.springlibrary.entities.Vid"/>
+      <mapping resource="ru/javabegin/training/springlibrary/entities/Vid.hbm.xml"/>
+      <mapping resource="ru/javabegin/training/springlibrary/entities/Zakaz.hbm.xml"/>
+      <mapping class="ru.javabegin.training.springlibrary.entities.Zakaz"/>
+      <!-- DB schema will be updated if needed -->
+    <!-- <property name="hbm2ddl.auto">update</property> -->
+  </session-factory>
+</hibernate-configuration>

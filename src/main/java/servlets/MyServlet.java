@@ -9,8 +9,50 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-@WebServlet("/s")
+import org.springframework.transaction.annotation.Transactional;
+import org.springframework.web.bind.annotation.*;
+import org.springframework.*;
+import ru.javabegin.training.springlibrary.entities.Provider;
+
+//@WebServlet("/s")
+//@Controller
+//@RequestMapping("kfc/brands")
+
+
+@RestController
+@RequestMapping(value = "api/v1")
 public class MyServlet extends HttpServlet {
+
+
+    // @TODO (relk): convert to POST
+    @RequestMapping(value = "/test", method = RequestMethod.GET)
+    @Transactional
+    public int getTest() {
+        Provider pr = new Provider();
+        int tour = pr.getKodProvider();
+        //System.out.print("tour = " + tour.getKodProvider());
+
+        return tour;
+
+//return pointDao.delete(2);
+
+    }
+
+
+
+
+
+/*    @RequestMapping(value="/{id1}", method = RequestMethod.GET)
+    public int  getShopInJSON(@PathVariable int id1) {
+
+        Provider pr = new Provider();
+        pr.setKodProvider(id1);
+
+
+        return pr.getKodProvider();
+
+    }*/
+/*
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -21,12 +63,24 @@ public class MyServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         response.setContentType("text/html");
 
-        String varTextA = "Hello World!";
-        request.setAttribute("textA", varTextA);
-        String varTextB = "It JSP. Testing buld on commit!!!";
-        request.setAttribute("textB", varTextB);
+      }
+    @RequestMapping(value = "/prov", method = RequestMethod.GET)
+    public @ResponseBody Provider getProviderInJSON(@PathVariable int id1){
+        Provider pr = new Provider();
+        pr.setKodProvider(1);
 
-        RequestDispatcher dispatcher = request.getRequestDispatcher("/index.jsp");
-        dispatcher.forward(request, response);
-    }
+        return pr;
+
+    }*/
+
+
+
+    /*public @ResponseBody Provider getProviderInJSON(@PathVariable int id1){
+        Provider pr = new Provider();
+        pr.setKodProvider(1);
+
+        return pr;
+
+    }*/
+
 }
