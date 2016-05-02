@@ -9,9 +9,9 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-import org.springframework.transaction.annotation.Transactional;
-import org.springframework.web.bind.annotation.*;
-import org.springframework.*;
+//import org.springframework.transaction.annotation.Transactional;
+//import org.springframework.web.bind.annotation.*;
+//import org.springframework.*;
 import ru.javabegin.training.springlibrary.entities.Provider;
 
 //@WebServlet("/s")
@@ -19,14 +19,14 @@ import ru.javabegin.training.springlibrary.entities.Provider;
 //@RequestMapping("kfc/brands")
 
 
-@RestController
+//@RestController
 @RequestMapping(value = "api/v1")
 public class MyServlet extends HttpServlet {
 
 
     // @TODO (relk): convert to POST
     @RequestMapping(value = "/test", method = RequestMethod.GET)
-    @Transactional
+   // @Transactional
     public int getTest() {
         Provider pr = new Provider();
         int tour = pr.getKodProvider();
